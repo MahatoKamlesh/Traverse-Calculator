@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traverse Computation Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Traverse Computation Calculator</h1>
+        <form id="traverseForm">
+            <h2>Known Stations</h2>
+            <label for="station1">Station 1 Coordinates (E, N):</label>
+            <input type="number" id="station1E" placeholder="Easting" required>
+            <input type="number" id="station1N" placeholder="Northing" required><br><br>
+            
+            <label for="station2">Station 2 Coordinates (E, N):</label>
+            <input type="number" id="station2E" placeholder="Easting" required>
+            <input type="number" id="station2N" placeholder="Northing" required><br><br>
+
+            <h2>Traverse Data</h2>
+            <label for="stations">Number of Stations:</label>
+            <input type="number" id="stations" placeholder="Enter number of stations" required><br><br>
+            
+            <div id="traverseData"></div>
+
+            <button type="button" onclick="calculateClosingError()">Calculate Closing Error</button>
+        </form>
+
+        <div id="result">
+            <h2>Results</h2>
+            <p id="closingErrorResult"></p>
+            <p id="correctedAnglesResult"></p>
+            <p id="bearingsResult"></p>
+            <p id="latitudesDeparturesResult"></p>
+            <p id="correctedLatDepResult"></p>
+            <p id="correctedCoordinatesResult"></p>
+            <button id="accuracyButton" style="display:none;" onclick="showAccuracy()">Show Accuracy and Closing Error</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
